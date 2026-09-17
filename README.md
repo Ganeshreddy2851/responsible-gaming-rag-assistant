@@ -4,6 +4,10 @@ A Retrieval-Augmented Generation (RAG) application for answering questions from 
 
 The project uses LangChain, ChromaDB, Hugging Face embeddings, and OpenAI models to retrieve relevant document context and generate grounded answers with source information.
 
+## Application Demo
+
+![Responsible Gaming RAG Assistant](assets/rag-assistant-demo.png)
+
 ## Features
 
 - Multi-document PDF ingestion
@@ -22,40 +26,21 @@ The project uses LangChain, ChromaDB, Hugging Face embeddings, and OpenAI models
 
 ## Architecture
 
-```text
-PDF Documents
-     |
-     v
-PyPDFLoader
-     |
-     v
-RecursiveCharacterTextSplitter
-     |
-     v
-HuggingFace Embeddings
-all-MiniLM-L6-v2
-     |
-     v
-ChromaDB
-     |
-     |  Persistent Knowledge Base
-     |
-User Question
-     |
-     v
-Retriever
-     |
-     v
-Top-K Relevant Chunks
-     |
-     v
-Prompt + Retrieved Context
-     |
-     v
-OpenAI LLM
-     |
-     v
-Grounded Answer + Sources
+```mermaid
+flowchart TD
+    A[Responsible Gaming PDF Documents] --> B[PyPDFLoader]
+    B --> C[RecursiveCharacterTextSplitter]
+    C --> D[HuggingFace Embeddings<br/>all-MiniLM-L6-v2]
+    D --> E[(Chroma Vector Database)]
+
+    F[User Question] --> G[Similarity Retriever<br/>Top-K]
+    E --> G
+    G --> H[Retrieved Document Chunks]
+    H --> I[Prompt + Context]
+    F --> I
+    I --> J[GPT-5-mini]
+    J --> K[Grounded Answer]
+    H --> L[Source Documents + Page Numbers]
 ```
 
 ## Tech Stack
