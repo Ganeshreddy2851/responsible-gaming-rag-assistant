@@ -1,0 +1,38 @@
+[
+    {
+        "question": "What does the document say about self-exclusion?",
+        "expected_pages": [7, 8, 9]
+    },
+    {
+        "question": "What does the document say about responsible gaming?",
+        "expected_pages": [2,3]
+    },
+    {
+        "question": "What does the document say about underage gambling?",
+        "expected_pages": [13,14]
+    },
+    {
+        "question": "How should gambling need to be advertised?",
+        "expected_pages": [10,11,12]
+    },
+    {
+        "question": "How can customers manage time and money?",
+        "expected_pages": [6,7]
+    }, 
+    {
+        "question": "What options are available if a player wants to stop themselves from gambling for a long period?",
+        "expected_pages": [7,8,9]
+    },
+    {
+        "question": "What protections can players use to control how much they spend or how long they play?",
+        "expected_pages": [6,7]
+    },
+    {
+        "question": "promoting gambling in a responsible way",
+        "expected_pages": [10,11,12]
+    },
+    {
+        "question": "Can kids gamble",
+        "expected_pages": [13,14]
+    }
+]

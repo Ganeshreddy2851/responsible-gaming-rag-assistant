@@ -1,0 +1,40 @@
+[
+    {
+        "question": "What does the document say about self-exclusion?",
+        "expected_keywords": [
+            "self-exclusion",
+            "long-term",
+            "six months"
+        ],
+        "should_abstain": false
+    },
+    {
+        "question": "What protections can players use to control how much they spend or how long they play?",
+        "expected_keywords": [
+            "limit",
+            "time"
+        ],
+        "should_abstain": false
+    },
+    {
+        "question": "Can kids gamble?",
+        "expected_keywords": [
+            "21",
+            "age"
+        ],
+        "should_abstain": false
+    },
+    {
+        "question": "How should gambling be advertised?",
+        "expected_keywords": [
+            "advertising",
+            "minors"
+        ],
+        "should_abstain": false
+    },
+    {
+        "question": "What is the CEO's favorite food?",
+        "expected_keywords": [],
+        "should_abstain": true
+    }
+]
