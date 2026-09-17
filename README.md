@@ -170,6 +170,17 @@ OPENAI_API_KEY=your_api_key
 
 Ingest PDFs:
 
+### Add Documents
+
+Place the PDF documents you want to use as the knowledge base inside the `data/` directory.
+
+Example:
+
+```text
+data/
+├── document1.pdf
+└── document2.pdf
+
 ```bash
 uv run python ingest.py
 ```
